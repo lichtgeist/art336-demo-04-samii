@@ -13,3 +13,97 @@ styled using ID selectors but take the time to think about
 the elements that are common across all components of the page
 and use class selectors where appropriate.
 */
+
+nav[role="navigation"] {
+    background-color: $color;
+    margin-bottom: $gutters;
+    min-height: 25px;
+}
+
+header[role="banner"] {
+    background-color: lighten($color,35%);
+    color: #fff;
+}
+
+.banner-logo {
+    box-sizing: border-box;
+    float: left;
+    padding: $gutters;
+    width: 24%;
+    @media (max-width: 480px) {
+        transition: width 1s ease-in;
+        width: 100%;
+    }
+    //margin-right: $gutters;
+    //margin-right: 2%;
+
+}
+
+.banner-logo svg {
+    width: 100%
+}
+
+.banner-text {
+    box-sizing: border-box;
+    float: left;
+    padding: $gutters;
+    width: 76%;
+    @media (max-width: 480px) {
+        width: 100%;
+    }
+}
+
+.group:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.work {
+    background: url('../img/seattle.jpg') no-repeat center center;
+    background-size: cover;
+    margin-top:  $gutters;
+    min-height: 300px;
+}
+
+.branding, .interactive, .marketing {
+    //background-color: lighten($color,30%);
+    box-sizing: border-box;
+    float: left;
+    //margin: $gutters;
+    //padding: $gutters;
+   // min-height: 200px;
+    width: 33.333333%;
+    @media (max-width: 480px) {
+        width: 100%;
+    }
+}
+
+.branding{
+    padding: $gutters $gutters/2 $gutters 0;
+    @media (max-width: 480px) {
+        padding: $gutters;
+    }
+    //padding: top right bottom left;
+} 
+
+.interactive{
+    padding: $gutters $gutters/2;
+     @media (max-width: 480px) {
+        padding: $gutters;
+    }
+    //padding: top right bottom left;
+} 
+
+.marketing {
+    padding: $gutters 0 $gutters $gutters/2;
+     @media (max-width: 480px) {
+        padding: $gutters;
+    }
+    //padding: top right bottom left;
+}
+
+.inner {
+    background-color: lighten($color,30%);
+    min-height: 200px;
+}
