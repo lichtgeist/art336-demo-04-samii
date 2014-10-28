@@ -107,3 +107,32 @@ header[role="banner"] {
     background-color: lighten($color,30%);
     min-height: 200px;
 }
+
+footer[role="contentinfo"] {
+    background-color: $color;
+    color: #fff;
+    float: left;
+}
+
+.contentinfo-social, .contentinfo-text {
+    box-sizing: border-box;
+    float: left;
+}
+
+.contentinfo-social {
+    padding: $gutters;
+    width: 30%;
+        @media (max-width: 480px) {
+            width: 100%
+     }
+}
+
+.contentinfo-text{
+    padding: $gutters $gutters $gutters 0;
+    width: 70%;
+        @media (max-width: 480px) {
+            padding: $gutters;
+            width: 100%;
+     }
+}
+
